@@ -2,3 +2,7 @@
   padding: 1rem 2rem;
   background-color: var(--prim-500);
 }
+
+.logo {
+  background-color: var(--prim-400);
+}
