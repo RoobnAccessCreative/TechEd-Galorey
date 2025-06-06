@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Image from "./components/Image";
 
 export default function App() {
   const [imges, setImges] = useState([]);
@@ -23,9 +24,9 @@ export default function App() {
       ) : (
         imges.map((i) => {
           return (
-            <div>
+            <main>
               <Image key={i.id} title={i.title} src={i.url} alt={i.alt} />
-            </div>
+            </main>
           );
         })
       )}
