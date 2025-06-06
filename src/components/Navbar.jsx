@@ -7,7 +7,7 @@ export default function Navbar() {
         <img
           src="/logo.png"
           alt="Logo"
-          className="logo p-1 rounded-xl object-contain bg-white/30 h-20"
+          className="logo p-1 rounded-xl object-contain h-20"
         />
         <h1 className="title">Galorey</h1>
       </div>
