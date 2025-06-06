@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
 import Loading from "./components/Loading";
+import Divider from "./components/Divider";
 
 export default function App() {
   const [imges, setImges] = useState([]);
@@ -27,7 +28,7 @@ export default function App() {
           {imges.map((i) => (
             <Image key={i.id} title={i.title} src={i.url} alt={i.alt} />
           ))}
-          <Divider />
+          <Divider length="full" />
           <h1 className="text-center text-4xl font-black">
             More Images Coming Soon :D
           </h1>
