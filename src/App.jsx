@@ -4,9 +4,11 @@ import Navbar from "./components/Navbar";
 import Image from "./components/Image";
 import Loading from "./components/Loading";
 import Divider from "./components/Divider";
+import Dimmer from "./components/Dimmer";
 
 export default function App() {
   const [imges, setImges] = useState([]);
+  const [dimmer, setDimmer] = useState(false);
 
   const imp = import.meta.env;
 
@@ -25,8 +27,16 @@ export default function App() {
         <Loading />
       ) : (
         <main className="flex p-[2rem] gap-[1rem] flex-wrap w-full items-center justify-evenly">
+          {dimmer ? <Dimmer /> : null}
           {imges.map((i) => (
-            <Image key={i.id} title={i.title} src={i.url} alt={i.alt} />
+            <Image
+              key={i.id}
+              title={i.title}
+              src={i.url}
+              alt={i.alt}
+              dimmer={dimmer}
+              setDimmer={setDimmer}
+            />
           ))}
           <Divider length="full" />
           <h1 className="text-center text-4xl font-black">

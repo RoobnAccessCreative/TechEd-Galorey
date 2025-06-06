@@ -9,6 +9,7 @@ export default function Image(props) {
   useEffect(() => {
     function handleNotModalClick(e) {
       if (!ref.current?.contains(e.target)) {
+        props.setDimmer(false);
         setModal(false);
       }
     }
@@ -18,6 +19,11 @@ export default function Image(props) {
     };
   }, []);
 
+  function handleModal() {
+    props.setDimmer(!props.dimmer);
+    setModal(!modal);
+  }
+
   return (
     <>
       {modal ? (
@@ -26,9 +32,7 @@ export default function Image(props) {
             src={props.src}
             alt={props.alt}
             className="img"
-            onClick={() => {
-              setModal(!modal);
-            }}
+            onClick={handleModal}
           />
           <Modal
             src={props.src}
@@ -42,9 +46,7 @@ export default function Image(props) {
           src={props.src}
           alt={props.alt}
           className="img"
-          onClick={() => {
-            setModal(!modal);
-          }}
+          onClick={handleModal}
         />
       )}
     </>
