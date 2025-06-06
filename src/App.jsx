@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Image from "./components/Image";
+import Loading from "./components/Loading";
+import Divider from "./components/Divider";
 
 export default function App() {
   const [imges, setImges] = useState([]);
@@ -18,16 +21,18 @@ export default function App() {
   return (
     <>
       <Navbar />
-      {imges ? (
+      {imges == [] ? (
         <Loading />
       ) : (
-        imges.map((i) => {
-          return (
-            <div>
-              <Image key={i.id} title={i.title} src={i.url} alt={i.alt} />
-            </div>
-          );
-        })
+        <main className="flex p-[2rem] gap-[1rem] flex-wrap w-full items-center justify-evenly">
+          {imges.map((i) => (
+            <Image key={i.id} title={i.title} src={i.url} alt={i.alt} />
+          ))}
+          <Divider length="full" />
+          <h1 className="text-center text-4xl font-black">
+            More Images Coming Soon :D
+          </h1>
+        </main>
       )}
     </>
   );

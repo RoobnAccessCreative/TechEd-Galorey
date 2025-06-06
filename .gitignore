@@ -1,3 +1,7 @@
+# Envs
+.env 
+.env.produciton
+
 # Logs
 logs
 *.log
@@ -13,6 +17,7 @@ dist-ssr
 *.local
 
 # Editor directories and files
+.vscode
 .vscode/*
 !.vscode/extensions.json
 .idea

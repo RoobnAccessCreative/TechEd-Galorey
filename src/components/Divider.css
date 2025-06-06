@@ -1,0 +1,14 @@
+.divider {
+  background-color: var(--dark-900);
+  opacity: 50%;
+
+  &.max {
+    width: 100%;
+  }
+  &.full {
+    width: 90%;
+  }
+  &.inverted {
+    background-color: var(--light-100);
+  }
+}
