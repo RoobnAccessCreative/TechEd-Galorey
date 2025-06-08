@@ -42,6 +42,8 @@ On top of this, I believe my site (while simplistic) is aesthetically pleasing e
 ## What I failed to achieve
 
 - I failed to expand my image gallery with a better API. I have never used an API that uses keys, so neither of upsplashes supplied methods seemed clear to me, and I decided to focus on the MVP instead. Specifically, I was struggling a bit with setup but mostly what to call and how to format it.
+- my `Loading` component doesn't seem to appear upon refreshing, only the images disappear.
+  - I think this is beacuse of my rendering condition checking for an empty array which, after the first load, is not set until after the data is recieved (i think). I could likely fix this with time, however.
 
 There were some further stretch goals that I also did not get to even try and include, such as:
 
