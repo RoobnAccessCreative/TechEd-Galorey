@@ -15,4 +15,8 @@
     transform: scale(0.9);
     filter: brightness(50%);
   }
+  &:focus-visible {
+    outline: 4px solid var(--acc-300);
+    scale: 1.02;
+  }
 }
