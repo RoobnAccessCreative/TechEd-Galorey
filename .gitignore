@@ -1,6 +1,6 @@
 # Envs
-.env 
-.env.produciton
+.env
+.env.production
 
 # Logs
 logs
