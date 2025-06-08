@@ -8,13 +8,14 @@ export default function Image(props) {
   const ref = useRef(null);
 
   function handleNotModalClick(e) {
-    if (!ref.current?.contains(e.target)) {
-      if (!ref.current?.contains(modalElement)) {
-        console.log(props.setDimmer);
-        props.setDimmer(false);
-        setModal(false);
-        window.removeEventListener("mousedown", handleNotModalClick);
-      }
+    if (
+      !ref.current?.contains(e.target) &&
+      !ref.current?.contains(modalElement)
+    ) {
+      console.log(props.setDimmer);
+      props.setDimmer(false);
+      setModal(false);
+      window.removeEventListener("mousedown", handleNotModalClick);
     }
   }
 
