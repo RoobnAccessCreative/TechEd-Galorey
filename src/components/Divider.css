@@ -1,6 +1,6 @@
 .divider {
   background-color: var(--dark-900);
-  opacity: 50%;
+  opacity: 20%;
 
   &.max {
     width: 100%;
