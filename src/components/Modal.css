@@ -7,7 +7,36 @@
   transform: translate(-50%, -50%);
   width: max-content;
   max-width: 90dvw;
-  height: 500px;
+  height: fit-content;
+  max-height: 85dvh;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
+
+.modal-img {
+  object-fit: contain;
+  height: fit-content;
+  max-height: 70dvh;
+}
+
+.dimmer,
+.modal {
+  animation: fadein 200ms ease-in-out 0s 1 normal none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* @media only screen and (width <= 800px) {
+  .modal-img {
+    height: fit-content;
+  }
+} */

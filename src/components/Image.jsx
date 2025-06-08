@@ -32,6 +32,10 @@ export default function Image(props) {
           alt={props.alt}
           className="img"
           onClick={handleModal}
+          onKeyDown={(e) => {
+            e.key === "Enter" ? handleModal() : null;
+          }}
+          tabIndex={0}
         />
       )}
     </>
